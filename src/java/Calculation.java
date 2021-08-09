@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Au
+ * @author Dullayut
  */
 public class Calculation extends HttpServlet {
 
@@ -46,13 +46,13 @@ public class Calculation extends HttpServlet {
             answer = numOne * numTwo;
             request.setAttribute("answer", answer);
         }
-        else {
-            request.setAttribute("symbol", "/");
-            if (numTwo == 0.0) request.setAttribute("answer", "Error divide by 0");
-            else {
-            answer = numOne / numTwo;
-            request.setAttribute("answer", answer); }
-        }
+        // else {
+        //     request.setAttribute("symbol", "/");
+        //     if (numTwo == 0.0) request.setAttribute("answer", "Error divide by 0");
+        //     else {
+        //     answer = numOne / numTwo;
+        //     request.setAttribute("answer", answer); }
+        // }
         request.getRequestDispatcher("/result.jsp").forward(request, response);
         return;
     }
